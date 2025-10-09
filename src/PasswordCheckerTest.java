@@ -4,11 +4,21 @@ import org.junit.jupiter.api.Test;
 
 public class PasswordCheckerTest {
 
-  @Test
-  public void testDummy() {
-    // This test is used only to validate that your VS Code setup is working
-    // Delete this test after you have written your other tests
-    assertEquals(0, 0);
-  }
+@Test
+    public void testRepeatedLetterInStringFrequency() {
+        // Arrange
+        CharacterFrequencyCounter counter = new CharacterFrequencyCounter("hello");
+        // Act
+        int actual = counter.getFrequency('l');
+        // Assert
+        assertEquals(2, actual);
+    }
+
+@Test
+    public void testExitInPassword() {
+        // Arrange
+        PasswordChecker testExit = new PasswordChecker()
+    }
+
 
 }
