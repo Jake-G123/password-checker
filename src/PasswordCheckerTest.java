@@ -5,19 +5,13 @@ import org.junit.jupiter.api.Test;
 public class PasswordCheckerTest {
 
 @Test
-    public void testRepeatedLetterInStringFrequency() {
-        // Arrange
-        CharacterFrequencyCounter counter = new CharacterFrequencyCounter("hello");
-        // Act
-        int actual = counter.getFrequency('l');
-        // Assert
-        assertEquals(2, actual);
-    }
-
-@Test
     public void testExitInPassword() {
         // Arrange
-        PasswordChecker testExit = new PasswordChecker()
+        PasswordChecker testExit = new PasswordChecker(6, 12);
+        // act
+        String actual = testExit.describePasswordLength("exit123");
+        // Assert
+        assertEquals("medium", actual);
     }
 
 
