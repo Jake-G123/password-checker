@@ -67,13 +67,26 @@ public class PasswordCheckerTest {
       // Assert
       assertEquals(false, actual);
   }
-
+  @Test
   public void testNonAlphaNumeric() {
     // Arrange
       PasswordChecker testExit = new PasswordChecker(6, 12);
       // act
-      boolean actual = testExit.isBannedPassword("!@#^&*$");
+      boolean actual = testExit.isAlphanumeric("!@#^&*$");
       // Assert
       assertEquals(false, actual);
   }
+
+  @Test
+  public void testAlphaNumeric() {
+    // Arrange
+      PasswordChecker testExit = new PasswordChecker(6, 12);
+      // act
+      boolean actual = testExit.isAlphanumeric("exit123");
+      // Assert
+      assertEquals(true, actual);
+  }
+
+  
+
 }
