@@ -86,7 +86,14 @@ public class PasswordCheckerTest {
       // Assert
       assertEquals(true, actual);
   }
-
-  
+  @Test
+  public void testSpaces() {
+    // Arrange
+      PasswordChecker testExit = new PasswordChecker(6, 12);
+      // act
+      boolean actual = testExit.isAlphanumeric("       ");
+      // Assert
+      assertEquals(false, actual);
+  }
 
 }
