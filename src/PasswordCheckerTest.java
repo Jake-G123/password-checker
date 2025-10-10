@@ -14,8 +14,7 @@ public class PasswordCheckerTest {
         assertEquals("short", actual);
     }
 
-    public void textValidExit()
-    {
+    public void textValidExit() {
         // Arrange
         PasswordChecker testExit = new PasswordChecker(6, 12);
         // act
@@ -23,5 +22,6 @@ public class PasswordCheckerTest {
         // Assert
         assertEquals(false, actual);
     } 
+
 
 }
