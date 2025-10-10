@@ -67,4 +67,13 @@ public class PasswordCheckerTest {
       // Assert
       assertEquals(false, actual);
   }
+
+  public void testNonAlphaNumeric() {
+    // Arrange
+      PasswordChecker testExit = new PasswordChecker(6, 12);
+      // act
+      boolean actual = testExit.isBannedPassword("!@#^&*$");
+      // Assert
+      assertEquals(false, actual);
+  }
 }
