@@ -34,4 +34,15 @@ public class PasswordCheckerTest {
       // Assert
       assertEquals(false, actual);
   } 
+
+  @Test
+  public void testInvalidExitDouble()
+  {
+      // Arrange
+      PasswordChecker testExit = new PasswordChecker(6, 12);
+      // act
+      boolean actual = testExit.isBannedPassword("qwertyqwerty");
+      // Assert
+      assertEquals(false, actual);
+  }
 }
