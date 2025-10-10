@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 public class PasswordCheckerTest {
 
   @Test
-  public void testExitInPassword() {
+  public void testMediumLength() {
     // Arrange
     PasswordChecker testExit = new PasswordChecker(6, 12);
     // act
@@ -23,6 +23,17 @@ public class PasswordCheckerTest {
         // Assert
         assertEquals("short", actual);
     }
+
+    @Test
+    public void testMaxLength() {
+        // Arrange
+        PasswordChecker testExit = new PasswordChecker(6, 12);
+        // act
+        String actual = testExit.describePasswordLength("exit12345678");
+        // Assert
+        assertEquals("long", actual);
+    }
+
 
   @Test
   public void testValidExit()
