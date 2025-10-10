@@ -13,4 +13,15 @@ public class PasswordCheckerTest {
         // Assert
         assertEquals("short", actual);
     }
+
+    public void textValidExit()
+    {
+        // Arrange
+        PasswordChecker testExit = new PasswordChecker(6, 12);
+        // act
+        boolean actual = testExit.isBannedPassword("exit1");
+        // Assert
+        assertEquals(false, actual);
+    } 
+
 }
